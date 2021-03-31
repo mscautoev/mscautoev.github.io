@@ -1,6 +1,6 @@
 # MSC AutoEV
 
-**Auto**nomous **E**lectric **V**ehicle Team of [MSC Lab](http://msc.kaist.ac.kr) 
+**Auto**nomous **E**lectric **V**ehicle Team of [MSC Lab, KAIST](http://msc.kaist.ac.kr) 
 
 !!! This page is under construction !!!
 
