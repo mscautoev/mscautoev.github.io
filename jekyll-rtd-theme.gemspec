@@ -4,7 +4,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["mscautoev"]
   spec.email         = ["mscautoev@gmail.com"]
 
-  spec.summary       = "Autonomous Vehicle Team, MSC KAIST"
+  spec.summary       = "Autonomous Electric Vehicle Team, MSC KAIST"
   spec.license       = "MIT"
   spec.homepage      = "https://mscautoev.github.io/"
 
