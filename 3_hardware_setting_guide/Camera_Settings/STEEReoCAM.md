@@ -265,3 +265,5 @@ Dynamic reconfiguration
 ```
 rosrun rqt_reconfigure rqt_reconfigure
 ```
+
+Last modified: 06/04/21. Edited by Minsu Cho (chominsu3998@kaist.ac.kr).
