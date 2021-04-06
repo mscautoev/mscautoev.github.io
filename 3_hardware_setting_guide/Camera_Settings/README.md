@@ -1,3 +1,7 @@
 # Camera Settings
 
-TEST3
+```
+{% raw %}{% include list.liquid all=true %}{% endraw %}
+```
+
+TEST4
