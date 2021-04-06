@@ -6,8 +6,8 @@ STEEReoCAM is a Stereo Vision camera for NVIDIA® Jetson TX2/AGX Xavier platform
 # Getting Started
 
 Prerequisities:
-	- Host PC with 18.04 (64-bit) to flash the binaries in Jetson TX2/AGX Xavier development kit.
-	- Jetpack version 4.2.2 (Strongly recommand), if you have some trouble in Jetpack version, see (optional).
+- Host PC with 18.04 (64-bit) to flash the binaries in Jetson TX2/AGX Xavier development kit.
+- Jetpack version 4.2.2 (Strongly recommand), if you have some trouble in Jetpack version, see (optional).
 	
 
 	
