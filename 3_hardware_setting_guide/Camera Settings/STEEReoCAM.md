@@ -1,2 +1,4 @@
 # STEEReoCAM
 
+
+source: `{{ page.path }}`
