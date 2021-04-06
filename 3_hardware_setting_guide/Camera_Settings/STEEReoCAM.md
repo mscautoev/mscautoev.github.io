@@ -164,7 +164,6 @@ git clone https://github.com/econsystems/vision_opencv.git
 cd ~/catkin
 catkin_make
 source ./devel/setup.bash
-
 ```
 
 For more information, please follow up the below wiki page
@@ -199,7 +198,6 @@ For more information, please follow up the below wiki page
  accuracy : Accuracy of the disparity image (0 - HIGH FRAME RATE, 1 - HIGH ACCURACY, 2 - ULTRA ACCURACY) 
  autoExposure : Enable auto exposure 
  pointcloudQuality : Quality of pointcloud(1 - HIGHEST, 2 - MEDIUM, 3 - STANDARD) 
-
 ```
 ---
 
@@ -212,7 +210,6 @@ For more information, please follow up the below wiki page
  autoExposure : Enable auto exposure 
  gain : Controls the gain of the camera(1-240) 
  pointcloudQuality : Quality of pointcloud(1 - HIGHEST, 2 - MEDIUM, 3 - STANDARD) 
-
 ```
 ---
 
@@ -222,28 +219,24 @@ Open a terminal and enter the following command :
 
 ```
  roslaunch taraxl_ros_package taraxl.launch
-
 ```
 
 To visualize TaraXL/STEEReoCAM image topics
 
 ```
 rqt_image_view
-
 ```
 
 To visualize TaraXL/STEEReoCAM dispariy image topic
 
 ```
 rosrun image_view disparity_view image:=/taraxl/stereo/disparity/image
-
 ```
 
 To visualize TaraXL/STEEReoCAM pointcloud topic
 
 ```
 rosrun rviz rviz
-
 ```
 
 To view imu data
@@ -251,7 +244,6 @@ To view imu data
 ```
 rostopic echo /taraxl/imu/data_raw
 rostopic echo /taraxl/imu/inclination
-
 ```
 
 To view calibration parameters for unrectified Frames
@@ -259,7 +251,6 @@ To view calibration parameters for unrectified Frames
 ```
 rostopic echo /taraxl/left/calib/raw 
 rostopic echo /taraxl/right/calib/raw 
-
 ```
 
 To view calibration parameters for rectified Frames
@@ -267,15 +258,10 @@ To view calibration parameters for rectified Frames
 ```
 rostopic echo /taraxl/left/calib/rect
 rostopic echo /taraxl/right/calib/rect 
-
 ```
 
 Dynamic reconfiguration
 
 ```
 rosrun rqt_reconfigure rqt_reconfigure
-```
-
-
-
 ```
