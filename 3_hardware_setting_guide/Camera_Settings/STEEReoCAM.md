@@ -36,9 +36,14 @@ Download the release package in https://developer.e-consystems.com/, and copy th
 	```
 	video0
 	```
-## Switch to another file
+	
+## Installing TaraXL SDK
 
-All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
+This section describes the steps to install SDK on Jetson Xavier.
+>The release package contains accelerated SDK binary that can run on NVIDIA® TX2 board. Before installing SDK, please check whether CUDA is installed.
+
+Run the following command to confirm whether CUDA framework is available in your device.
+'#nvcc -V'
 
 ## Rename a file
 
