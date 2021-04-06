@@ -26,7 +26,7 @@ Prerequisities:
 
   
 
-Download the release package in https://developer.e-consystems.com/, and copy that into the home directory of the Jetson Xavier.
+Download the release package in [e-CAM20_Stereo_CUMI2311_TX2_JETSON_L4T32.2.1_20-NOV-2019_R01.tar.gz](https://developer.e-consystems.com/Downloads?key=%2FNFuH5utEk1wl66zKXGpeorAyfT92svSC0APPC49AvKds0FJ4uG9llnXgyBiMjrjFlwZ%2BMzmUIlZNqqU5xNa5E4CsiJg0eThkjboYODYCiDo18Xe%2BQBKeni45cynunEScxrxERLqOeTvmnR8ML7IaukaYTv5fqZTo8zG%2FL4xW%2FUuDd77ZtGFu2KkIvVtWFX8qdJ%2F0JnaeoSlCWHn7gF3QuZOj99cIp5M%2BBvSYS9jvZzMLm22s61Y77ujzjZOiHwndiL4ZfgY4bPdRHmjF5nwy%2BJeAoGMer4%2Bt6VQOtqN7bU%3D"), and copy that into the home directory of the Jetson Xavier.
 
 - Extract the release package in the Jetson Xavier to obtain the binaries.
 
@@ -82,7 +82,7 @@ Run the following command to confirm whether CUDA framework is available in your
 `#nvcc -V`
 
 The steps to install SDK on NVIDIA Jetson Xavier are as follows:
-1. Download the **STEEReoCAM_TaraXL_SDK_xxx_Jetson.tar** file in [https://developer.e-consystems.com/](https://developer.e-consystems.com/) on your Jetson kit.
+1. Download the [STEEReoCAM_TaraXL_SDK_xxx_Jetson.tar](https://developer.e-consystems.com/Downloads?key=%2FNFuH5utEk1wl66zKXGpeoTVGhp%2F8zKT90Fgw%2FyOOufcAiZX%2FwS9yfYjw3JmD2UZjHxO2UmBsc%2BMUqfMCtiOewKsUecGhHoM348lJS5hgMAvr%2BYBGYdcMrReAllibRiwyazbJqDm%2BIO5mARJBQho2N0muE8YL0JxmsQsg5S2mHxsBV%2BSQ5gZ621YkGcYM9gJ9ax%2BD8mvA6br3LM91HG7eBfRm%2FPq%2F%2FC5zDq%2BYHFydYdLDJYM%2FsSnddA3HUXyVk91XspHuoFVaCgXbVWY3f2viN920S89tCavSnj3rjDPttg%3D) on your Jetson kit.
 2. Extract that file to a suitable location.
 3. Go to location of the extracted package, and run the following command with execute permissions on this file, before running the Makefile. Running this command will install all the necessary dependencies to develop applications with TaraXL camera and the accelerated SDK.
 	```
@@ -131,22 +131,18 @@ However, if Jetpack 4.2.2 does not appear in your SDK manager, open your termina
 
   
 
-StackEdit extends the standard Markdown syntax by adding extra **Markdown extensions**, providing you with some nice features.
+The TaraXL - See3CAM_StereoA is a UVC compliant USB 3.0 SuperSpeed Stereo vision camera from e-con Systems, a leading embedded Product Design Services company which specializes in the advanced camera solutions.
 
   
 
->  **ProTip:** You can disable any **Markdown extension** in the **File properties** dialog.
-
-  
-  
-
+---
 ### Getting started
 
 Prerequisites
 -   Ubuntu 18.04
 -   [TARAXL SDK 3.2.2](https://developer.e-consystems.com/)  and its dependency  [CUDA](https://developer.nvidia.com/cuda-downloads)
 -   [ROS Melodic](http://wiki.ros.org/melodic/Installation/Ubuntu)
-
+---
 ### Build the program
 
 The taraxl-ros-package is a catkin package. It depends on the following ROS packages:
@@ -174,6 +170,7 @@ For more information, please follow up the below wiki page
 
 [http://wiki.ros.org/taraxl-ros-package](http://wiki.ros.org/taraxl-ros-package)
 
+---
 ### Published Topics
 
 ```
@@ -190,8 +187,8 @@ For more information, please follow up the below wiki page
 /taraxl/right/calib/raw - Calibration informations for unrectified right image
 /taraxl/left/calib/rect - Calibration informations for rectified left image
 /taraxl/right/calib/rect - Calibration informations for rectified right image
-
 ```
+---
 
 ### Dynamic Reconfiguration Settings for TaraXL
 
@@ -203,6 +200,7 @@ For more information, please follow up the below wiki page
  pointcloudQuality : Quality of pointcloud(1 - HIGHEST, 2 - MEDIUM, 3 - STANDARD) 
 
 ```
+---
 
 ### Dynamic Reconfiguration Settings for STEEREoCam
 
@@ -215,6 +213,7 @@ For more information, please follow up the below wiki page
  pointcloudQuality : Quality of pointcloud(1 - HIGHEST, 2 - MEDIUM, 3 - STANDARD) 
 
 ```
+---
 
 ### Test Package
 
