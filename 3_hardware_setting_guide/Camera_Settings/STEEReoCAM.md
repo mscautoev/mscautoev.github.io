@@ -21,7 +21,7 @@ Prerequisities:
   
 
   
-
+---
 ### Driver installation
 
   
@@ -32,9 +32,9 @@ Download the release package in https://developer.e-consystems.com/, and copy th
 
 ```
 
-tar -xampf e-CAM20_Stereo_CUMI2311_TX2_JETSON_<L4T_Version>_<release_date>_<release_version>.tar.gz
+$ tar -xampf e-CAM20_Stereo_CUMI2311_TX2_JETSON_<L4T_Version>_<release_date>_<release_version>.tar.gz
 
-cd e- CAM20_Stereo_CUMI2311_TX2_JETSON_<L4T_Version>_<releas e_date>_<release_version>
+$ cd e- CAM20_Stereo_CUMI2311_TX2_JETSON_<L4T_Version>_<releas e_date>_<release_version>
 
 ```
 
@@ -42,9 +42,9 @@ cd e- CAM20_Stereo_CUMI2311_TX2_JETSON_<L4T_Version>_<releas e_date>_<release_ve
 
 ```
 
-sudo chmod a+x ./install_binaries_<version>.sh
+$ sudo chmod a+x ./install_binaries_<version>.sh
 
-sudo ./install_binaries_<version>.sh
+$ sudo ./install_binaries_<version>.sh
 
 ```
 
@@ -54,7 +54,7 @@ This script will reboot the Jetson Xavier automatically after installing the bin
 
 ```
 
-ls /dev/video*
+$ ls /dev/video*
 
 ```
 
@@ -65,6 +65,8 @@ The output message appears as shown below.
 video0
 
 ```
+
+---
 
 ### Installing TaraXL SDK
 
@@ -77,12 +79,28 @@ This section describes the steps to install SDK on Jetson Xavier.
   
 
 Run the following command to confirm whether CUDA framework is available in your device.
+`#nvcc -V`
 
-'#nvcc -V'
-
+The steps to install SDK on NVIDIA Jetson Xavier are as follows:
+1. Download the **STEEReoCAM_TaraXL_SDK_xxx_Jetson.tar** file in [https://developer.e-consystems.com/](https://developer.e-consystems.com/) on your Jetson kit.
+2. Extract that file to a suitable location.
+3. Go to location of the extracted package, and run the following command with execute permissions on this file, before running the Makefile. Running this command will install all the necessary dependencies to develop applications with TaraXL camera and the accelerated SDK.
+	```
+	$ sudo ./configure.sh
+	```
+	
+4.  Run the following commands to install the built libraries into a specific path **/usr/local/taraxl-skd** and add that path to the required configuration files.
+	```
+	$ sudo make
+	$ sudo make install
+	```
+5. Run the following command to reload the shell for using the modified encironment variables.
+	```
+	$ source ~/.bashrc
+	```
 
   
-
+---
 ### (Optional) How to flash old version of Jetpack
 
   
@@ -111,7 +129,7 @@ However, if Jetpack 4.2.2 does not appear in your SDK manager, open your termina
 
 ## ROS extensions
 
-  TEST
+  
 
 StackEdit extends the standard Markdown syntax by adding extra **Markdown extensions**, providing you with some nice features.
 
