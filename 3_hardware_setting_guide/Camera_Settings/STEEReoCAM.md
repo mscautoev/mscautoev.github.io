@@ -1,3 +1,3 @@
 # STEEReoCAM
 
-Test page for steereocamera
+Edit by Minsu Cho (chominsu3998@kaist.ac.kr)
