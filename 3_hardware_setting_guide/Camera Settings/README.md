@@ -6,4 +6,4 @@
 
 {% include list.liquid all=true %}
 
-TEST1
+TEST2
