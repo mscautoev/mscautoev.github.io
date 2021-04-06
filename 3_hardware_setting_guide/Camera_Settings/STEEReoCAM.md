@@ -201,7 +201,7 @@ For more information, please follow up the below wiki page
 ```
 ---
 
-### Dynamic Reconfiguration Settings for STEEREoCam
+### Dynamic Reconfiguration Settings for STEEReoCam
 
 ```
  brightness : Controls brightness of the image (1-10 - Works only when auto exposure is enabled) 
