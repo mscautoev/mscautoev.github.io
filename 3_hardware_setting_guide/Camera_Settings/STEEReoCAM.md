@@ -12,10 +12,30 @@ Prerequisities:
 
 	
 
-## Create files and folders
+## Driver installation
 
-The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.
-
+Download the release package in https://developer.e-consystems.com/, and copy that into the home directory of the Jetson Xavier.
+ - Extract the release package in the Jetson Xavier to obtain the binaries.
+	```
+	tar -xampf e-CAM20_Stereo_CUMI2311_TX2_JETSON_<L4T_Version>_<release_date>_<release_version>.tar.gz
+	
+	cd e- CAM20_Stereo_CUMI2311_TX2_JETSON_<L4T_Version>_<releas e_date>_<release_version>	
+	```
+- Run the following commands to install the binaries.
+	```
+	sudo chmod a+x ./install_binaries_<version>.sh
+	sudo ./install_binaries_<version>.sh
+	```
+	This script will reboot the Jetson Xavier automatically after installing the binaries successfully.
+	
+- Run the following command to check if the driver has been installed successfully.
+	```
+	ls /dev/video*
+	```
+	The output message appears as shown below.
+	```
+	video0
+	```
 ## Switch to another file
 
 All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
