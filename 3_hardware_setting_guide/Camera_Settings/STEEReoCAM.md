@@ -124,7 +124,7 @@ However, if Jetpack 4.2.2 does not appear in your SDK manager, open your termina
   
   
   
-  
+  ---
 
 
 ## ROS extensions
@@ -140,7 +140,141 @@ StackEdit extends the standard Markdown syntax by adding extra **Markdown extens
   
   
 
-### Ex
+### Getting started
+
+Prerequisites
+-   Ubuntu 18.04
+-   [TARAXL SDK 3.2.2](https://developer.e-consystems.com/)  and its dependency  [CUDA](https://developer.nvidia.com/cuda-downloads)
+-   [ROS Melodic](http://wiki.ros.org/melodic/Installation/Ubuntu)
+
+### Build the program
+
+The taraxl-ros-package is a catkin package. It depends on the following ROS packages:
+
+-   roscpp
+-   rosconsole
+-   sensor_msgs
+-   stereo_msgs
+-   image_transport
+-   dynamic_reconfigure
+
+Open a terminal and build the package:
+
+```
+cd ~/catkin/src
+git clone https://github.com/econsystems/taraxl-ros-package
+git clone https://github.com/econsystems/vision_opencv.git
+cd ~/catkin
+catkin_make
+source ./devel/setup.bash
+
+```
+
+For more information, please follow up the below wiki page
+
+[http://wiki.ros.org/taraxl-ros-package](http://wiki.ros.org/taraxl-ros-package)
+
+### Published Topics
+
+```
+/taraxl/left/image_rect - Rectified left image
+/taraxl/right/image_rect - Rectified right image
+/taraxl/left/image_raw - Unrectified left image
+/taraxl/right/image_raw - Unrectified right image 
+/taraxl/stereo/disparity/image - Disparity image
+/taraxl/depth/image - Depth image 
+/taraxl/stereo/pointcloud - pointcloud
+/taraxl/imu/data_raw - Raw IMU data - linear acceleration and angular velocity
+/taraxl/imu/inclination - IMU inclination data w.r.t 3 axes x,y and z
+/taraxl/left/calib/raw - Calibration informations for unrectified left image
+/taraxl/right/calib/raw - Calibration informations for unrectified right image
+/taraxl/left/calib/rect - Calibration informations for rectified left image
+/taraxl/right/calib/rect - Calibration informations for rectified right image
+
+```
+
+### Dynamic Reconfiguration Settings for TaraXL
+
+```
+ brightness : Controls brightness of the image (1-7)
+ exposure : Manual exposure value (10-1000000)
+ accuracy : Accuracy of the disparity image (0 - HIGH FRAME RATE, 1 - HIGH ACCURACY, 2 - ULTRA ACCURACY) 
+ autoExposure : Enable auto exposure 
+ pointcloudQuality : Quality of pointcloud(1 - HIGHEST, 2 - MEDIUM, 3 - STANDARD) 
+
+```
+
+### Dynamic Reconfiguration Settings for STEEREoCam
+
+```
+ brightness : Controls brightness of the image (1-10 - Works only when auto exposure is enabled) 
+ exposure : Manual exposure value (1-7500)
+ accuracy : Accuracy of the disparity image (0 - HIGH FRAME RATE, 1 - HIGH ACCURACY, 2 - ULTRA ACCURACY) 
+ autoExposure : Enable auto exposure 
+ gain : Controls the gain of the camera(1-240) 
+ pointcloudQuality : Quality of pointcloud(1 - HIGHEST, 2 - MEDIUM, 3 - STANDARD) 
+
+```
+
+### Test Package
+
+Open a terminal and enter the following command :
+
+```
+ roslaunch taraxl_ros_package taraxl.launch
+
+```
+
+To visualize TaraXL/STEEReoCAM image topics
+
+```
+rqt_image_view
+
+```
+
+To visualize TaraXL/STEEReoCAM dispariy image topic
+
+```
+rosrun image_view disparity_view image:=/taraxl/stereo/disparity/image
+
+```
+
+To visualize TaraXL/STEEReoCAM pointcloud topic
+
+```
+rosrun rviz rviz
+
+```
+
+To view imu data
+
+```
+rostopic echo /taraxl/imu/data_raw
+rostopic echo /taraxl/imu/inclination
+
+```
+
+To view calibration parameters for unrectified Frames
+
+```
+rostopic echo /taraxl/left/calib/raw 
+rostopic echo /taraxl/right/calib/raw 
+
+```
+
+To view calibration parameters for rectified Frames
+
+```
+rostopic echo /taraxl/left/calib/rect
+rostopic echo /taraxl/right/calib/rect 
+
+```
+
+Dynamic reconfiguration
+
+```
+rosrun rqt_reconfigure rqt_reconfigure
+```
 
 
 
