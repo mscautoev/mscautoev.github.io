@@ -31,21 +31,15 @@ Download the release package in [e-CAM20_Stereo_CUMI2311_TX2_JETSON_L4T32.2.1_20
 - Extract the release package in the Jetson Xavier to obtain the binaries.
 
 ```
-
 $ tar -xampf e-CAM20_Stereo_CUMI2311_TX2_JETSON_<L4T_Version>_<release_date>_<release_version>.tar.gz
-
 $ cd e- CAM20_Stereo_CUMI2311_TX2_JETSON_<L4T_Version>_<releas e_date>_<release_version>
-
 ```
 
 - Run the following commands to install the binaries.
 
 ```
-
 $ sudo chmod a+x ./install_binaries_<version>.sh
-
 $ sudo ./install_binaries_<version>.sh
-
 ```
 
 This script will reboot the Jetson Xavier automatically after installing the binaries successfully.
@@ -53,17 +47,13 @@ This script will reboot the Jetson Xavier automatically after installing the bin
 - Run the following command to check if the driver has been installed successfully.
 
 ```
-
 $ ls /dev/video*
-
 ```
 
 The output message appears as shown below.
 
 ```
-
 video0
-
 ```
 
 ---
