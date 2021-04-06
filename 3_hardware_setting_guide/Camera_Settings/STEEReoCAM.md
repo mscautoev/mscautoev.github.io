@@ -5,7 +5,12 @@ STEEReoCAM is a Stereo Vision camera for NVIDIA® Jetson TX2/AGX Xavier platform
 
 # Getting Started
 
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
+Prerequisities:
+	- Host PC with 18.04 (64-bit) to flash the binaries in Jetson TX2/AGX Xavier development kit.
+	- Jetpack version 4.2.2 (Strongly recommand), if you have some trouble in Jetpack version, see (optional).
+	
+
+	
 
 ## Create files and folders
 
@@ -23,9 +28,19 @@ You can rename the current file by clicking the file name in the navigation bar 
 
 You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
 
-## Export a file
+## (Optional) How to flash old version of Jetpack
 
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
+In order to flash Jetpack 4.2.2 on your Xavier, you should follow as below.
+
+- Step 1. Install SDK mannager on your host PC. Download [sdkmanager_1.3.0-7105](https://developer.nvidia.com/sdkmanager-130-7105-amd64 "sdkmanager-1.3.0-7105") and install.
+	> sudo apt install ./sdkmanager_1.3.0-7105_amd64.deb
+- Step 2. After installing the SDK manager in yout host PC, follow the instructions in the link below to run the SDK manager and flash the Jetson kit with Jetpack 4.2.2. 
+ https://docs.nvidia.com/sdk-manager/install-with-sdkm-jetson/index.html
+However, if Jetpack 4.2.2 does not appear in your SDK manager, open your terminal and command as below.
+	> sdkmanager --archivedversions
+
+
+
 
 
 # Synchronization
