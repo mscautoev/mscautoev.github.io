@@ -1,7 +1,3 @@
----
-sort: 1
----
-
 # STEEReoCAM
 
-source: `{{ page.path }}`
+Test page for steereocamera
